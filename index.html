@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="loco.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
       rel="stylesheet"
@@ -11,6 +12,8 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <div id="minicircle"></div>
+
     <div id="main">
       <div id="hero">
         <div id="nav">
@@ -18,15 +21,26 @@
           <h4>Menu+</h4>
         </div>
         <div id="heading">
-          <h1>full stack</h1>
+          <!-- To give the pop up effect -->
+          <div class="bounding">
+            <h1 class="boundingelem">a full stack</h1>
+          </div>
           <div class="blocktext">
-            <h1 id="secondh1">developer</h1>
-            <h5>based in hunsur</h5>
+            <div class="bounding">
+              <h1 class="boundingelem" id="secondh1">developer</h1>
+            </div>
+            <div class="bounding">
+              <h5 class="boundingelem">based in hunsur</h5>
+            </div>
           </div>
         </div>
         <div id="chhotiheading">
-          <h5>available to work</h5>
-          <h5>from aug 23'</h5>
+          <div class="bounding">
+            <h5 class="boundingelem">available to work</h5>
+          </div>
+          <div class="bounding">
+            <h5 class="boundingelem">from aug 23'</h5>
+          </div>
         </div>
         <div id="herofooter">
           <a href="#"
@@ -39,6 +53,63 @@
           </div>
         </div>
       </div>
+      <div id="second">
+        <div class="elem">
+          <img src="./IMG_1.jpg" alt="first" />
+          <h1>First</h1>
+          <h5>2022</h5>
+        </div>
+        <div class="elem">
+          <img src="./IMG_2.jpg" alt="second" />
+          <h1>Second</h1>
+          <h5>2021</h5>
+        </div>
+        <div class="elem elemlast">
+          <img src="./IMG_3.jpg" alt="third" />
+          <h1>Third</h1>
+          <h5>2019</h5>
+        </div>
+      </div>
+      <div id="about">
+        <div id="imgabout"></div>
+        <div id="textabout">
+          <h5>
+            A passionate Full Stack Developer, coding and hands-on experience
+            developing websites using HTML, CSS, Javascript, React, Redux,
+            NodeJs, MongoDB and Express. Adept at contributing to a highly
+            collaborative work environment, finding solution and excellent at
+            communicating things. Looking forward to opportunities that can
+            bring more challenges and learnings to leverage and hone skills.
+          </h5>
+          <a href="">Let's Connect</a>
+        </div>
+      </div>
+      <div id="subscribe">
+        <h3>See more on GitHub <i class="ri-github-fill"></i></h3>
+      </div>
+      <div id="footer">
+        <div id="footerleft">
+          <h4>2023 &copy;</h4>
+          <h5>Set time here</h5>
+        </div>
+        <div id="footerright">
+          <a href="#">linkedin</a>
+          <a href="">email</a>
+          <a href="">discord</a>
+        </div>
+      </div>
     </div>
+
+    <!-- Scripts for animating the website: -->
+    <!-- GSAP -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+      integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- Locomotive Scroll -->
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+    <script src="./script.js"></script>
   </body>
 </html>

@@ -11,11 +11,34 @@ body {
     height: 100%;
 }
 
+#minicircle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    z-index: 9999999;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+}
+
 #main {
     width: 100%;
+    background-color: black;
+}
+
+/* To make the content appear from bottom  */
+.bounding {
+    width: fit-content;
+    overflow: hidden;
+    /* background-color: red; */
+}
+
+.bounding .boundingelem {
+    transform: translateY(100%);
 }
 
 #hero {
+    position: relative;
     width: 100%;
     height: 100vh;
     background-color: black;
@@ -56,6 +79,10 @@ body {
 
 .blocktext {
     width: fit-content;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    align-items: end;
 }
 
 .blocktext h5 {
@@ -67,6 +94,9 @@ body {
 #chhotiheading {
     margin-top: 4rem;
     padding-right: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
 }
 
 #chhotiheading h5 {
@@ -83,6 +113,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    font-size: 10px;
 }
 
 #herofooter a {
@@ -104,4 +135,123 @@ body {
     height: 25px;
     border-radius: 50%;
     background-color: rgb(114, 114, 114);
+}
+
+#second {
+    padding-top: 9rem;
+    padding-right: 10vw;
+    padding-left: 1vw;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    color: white;
+}
+
+.elem {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2vw 0vw 2vw 3vw;
+    border-top: 1px solid #888;
+}
+
+.elem h1 {
+    text-transform: uppercase;
+    font-size: 6vw;
+    opacity: .8;
+}
+
+.elemlast {
+    border-bottom: 1px solid #888;
+}
+
+.elem img {
+    position: absolute;
+    z-index: 999;
+    height: 150%;
+    display: none;
+}
+
+#about {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
+    width: 100%;
+    background-color: black;
+    padding: 10vw 10vw;
+    padding-left: 45vw;
+    color: white;
+}
+
+#imgabout {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-image: url('./profileImg.jpeg');
+    background-size: cover;
+}
+
+#textabout {
+    text-align: justify;
+    font-size: 14px;
+    width: 75%;
+    opacity: .8;
+    letter-spacing: 1px;
+    line-height: 17px;
+}
+
+#textabout h5 {
+    margin-bottom: 1.5rem;
+}
+
+#textabout a {
+    text-decoration: none;
+    color: white;
+    border: 1px solid #888;
+    border-radius: 30px;
+    padding: .75rem;
+    font-size: 10px;
+}
+
+#subscribe {
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: 4vw;
+}
+
+#subscribe h3 {
+    font-size: 3vw;
+    opacity: .6;
+}
+
+#footer {
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    font-size: .75vw;
+    text-transform: lowercase;
+}
+
+
+#footerleft {
+    display: flex;
+    gap: 10px;
+}
+
+#footerright {
+    display: flex;
+    gap: 30px;
+}
+
+#footerright a {
+    text-decoration: none;
+    color: white;
+    opacity: .8;
 }
