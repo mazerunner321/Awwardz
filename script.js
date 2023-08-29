@@ -1,7 +1,28 @@
+//Locomotive Scroll:
 const scroll = new LocomotiveScroll({
   el: document.querySelector("#main"),
   smooth: true,
 });
+
+//To make circle skew according to movement:
+function circleSkew() {
+  var xscale = 1;
+  var yscale = 1;
+
+  var xprev = 0;
+  var yprev = 0;
+  window.addEventListener("mousemove", function (details) {
+    var xdiff = details.clientX - xprev;
+    var ydiff = details.clientY - yprev;
+
+    xprev = details.clientX;
+    yprev = details.clientY;
+
+    console.log(xdiff, ydiff);
+  });
+}
+
+circleSkew();
 
 // Mouse Circle
 function circleMouseFollower() {
