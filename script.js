@@ -18,19 +18,21 @@ function circleSkew() {
     xprev = details.clientX;
     yprev = details.clientY;
 
-    console.log(xdiff, ydiff);
+    xscale = gsap.utils.clamp(0.8, 1.2, xdiff);
+    yscale = gsap.utils.clamp(0.8, 1.2, ydiff);
+
+    circleMouseFollower(xscale, yscale);
   });
 }
-
 circleSkew();
 
 // Mouse Circle
-function circleMouseFollower() {
+function circleMouseFollower(xscale, yscale) {
   window.addEventListener("mousemove", function (info) {
     // console.log(info.clientX, info.clientY);
     document.querySelector(
       "#minicircle"
-    ).style.transform = `translate(${info.clientX}px, ${info.clientY}px)`;
+    ).style.transform = `translate(${info.clientX}px, ${info.clientY}px) scale(${xscale}, ${yscale})`;
   });
 }
 circleMouseFollower();
