@@ -73,7 +73,7 @@ document.querySelectorAll(".elem").forEach((elem) => {
     gsap.to(elem.querySelector("img"), {
       opacity: 0,
       duration: 0.5,
-      ease: Power3,
+      ease: Power2,
     });
   });
 
@@ -92,3 +92,19 @@ document.querySelectorAll(".elem").forEach((elem) => {
     });
   });
 });
+
+//Time:
+function getTime() {
+  var currentDate = new Date();
+
+  // Getting the current time in IST as a string
+  var options = { timeZone: "Asia/Kolkata" };
+  var currentTimeISTString = currentDate.toLocaleString("en-US", options);
+
+  let currTime = currentTimeISTString.split(",");
+  // console.log(currTime[1]);
+  document.getElementById("time").innerText = currTime[1];
+}
+setInterval(() => {
+  getTime();
+}, 1000);
